@@ -11,8 +11,8 @@ public:
         int n12 = n0+n1;
         for(int i = 0; i<n ; i++ ){
             if(i<n0) nums[i]=0;
-            if(i>=n0 && i< n12) nums[i]=1;
-            if(i>=n12) nums[i]=2;
+            else if(i< n12) nums[i]=1;
+            else nums[i]=2;
             cout<<nums[i]<<" ";
         }
         
