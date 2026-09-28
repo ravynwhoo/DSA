@@ -10,8 +10,7 @@ public:
         else{
             nums1[k]=nums1[i];
         i--;
-       
-    }
+        }
      k--;
     }
 
