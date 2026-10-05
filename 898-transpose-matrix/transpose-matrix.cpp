@@ -9,8 +9,6 @@ public:
           matrix2[i][j] = matrix[j][i];
         }
     }
-
     return matrix2;
-
     }
 };
