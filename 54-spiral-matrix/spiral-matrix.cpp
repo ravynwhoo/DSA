@@ -7,24 +7,27 @@ public:
         
     int minr = 0, minc = 0;
         int maxr= n-1, maxc=m-1;
-        int count = 0, end= n*m;
+
     while(minr <= maxr && minc <= maxc){
-        for(int j = minc; j <= maxc && count <end ;j++, count++){
+        for(int j = minc; j <= maxc  ;j++){
             a.push_back(matrix[minr][j]);
         }
         minr++;
-
-        for(int k = minr; k<=maxr && count<end ; k++, count++){
+        
+        if(minr > maxr || minc > maxc) break;
+        for(int k = minr; k<=maxr ; k++){
             a.push_back(matrix[k][maxc]);
         }
         maxc--;
 
-        for(int p = maxc ;p >= minc &&count<end ;p--, count++){
+        if(minr > maxr || minc > maxc) break;
+        for(int p = maxc ;p >= minc ;p--){
            a.push_back(matrix[maxr][p]);
         }
         maxr--;
-
-        for(int l =  maxr; l >=  minr && count<end ; l--,count++){
+        
+        if(minr > maxr || minc > maxc) break;
+        for(int l =  maxr; l >=  minr ; l--){
             a.push_back(matrix[l][minc]);
         }
         minc++;
